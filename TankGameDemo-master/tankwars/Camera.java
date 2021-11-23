@@ -12,11 +12,11 @@ public class Camera {
     
     public void tick(GameObject object){
         // Camera Coordinates
-        //x = object.getX() - 1280/2;       // Less movement from camera
-        //y = object.getY() - 960/2;
-        x += ((object.getX() - x) - 1280/2) * 0.05f;        
-        y += ((object.getY() - y) - 960/2) * 0.05f;     
-        
+//        x = object.getX() - 1280/2;       // Less movement from camera
+//        y = object.getY() - 960/2;
+        x += ((object.getX() - x) - 1280/2) * 0.05f;
+        y += ((object.getY() - y) - 960/2) * 0.05f;
+
         // Set Camera Bounds
         if(x <= 0)
             x = 0;

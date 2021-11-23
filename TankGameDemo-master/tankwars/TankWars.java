@@ -36,7 +36,7 @@ public class TankWars extends Canvas implements Runnable{
         
         handler = new Handler();
         camera = new Camera(0, 0);
-        camera2 = new Camera(0, 0);
+//        camera2 = new Camera(0, 0);
         this.addKeyListener(new KeyInputOne(handler, camera, this));
         this.addKeyListener(new KeyInputTwo(handler, camera2, this));      // Attempt to allow both players to shoot simultaneously
         
@@ -48,18 +48,18 @@ public class TankWars extends Canvas implements Runnable{
 
         
         BufferedImageLoader loader = new BufferedImageLoader();
-        //world = new BufferedImage(1280, 960, BufferedImage.TYPE_BYTE_INDEXED);
-        //leftScreen = new BufferedImage(640, 480, BufferedImage.TYPE_INT_ARGB);
-        //rightScreen = new BufferedImage(640, 480, BufferedImage.TYPE_INT_ARGB);
+//        world = new BufferedImage(1280, 960, BufferedImage.TYPE_BYTE_INDEXED);
+//        leftScreen = new BufferedImage(640, 480, BufferedImage.TYPE_INT_ARGB);
+//        rightScreen = new BufferedImage(640, 480, BufferedImage.TYPE_INT_ARGB);
         
         // Load images
-        level_skeleton = loader.loadImage("/tank_level.png");           // Loads solid color skeleton
-        background = loader.loadImage("/background.png");               // Loads background image
-        wallOne = loader.loadImage("/UnbreakableWall.png");             // Loads wall one image
-        wallTwo = loader.loadImage("/BreakableWall.png");               // Loads wall two image
-        tankOneSprite = loader.loadImage("/TankOneSpriteSheet.png");    // Loads tank one sprite sheet image
-        tankTwoSprite = loader.loadImage("/TankTwoSpriteSheet.png");    // Loads tank two sprite sheet image
-        healthBox = loader.loadImage("/HealthBox.png");
+        level_skeleton = loader.loadImage("/Resources/tank_level.png");           // Loads solid color skeleton
+        background = loader.loadImage("/Resources/background.png");               // Loads background image
+        wallOne = loader.loadImage("/Resources/UnbreakableWall.png");             // Loads wall one image
+        wallTwo = loader.loadImage("/Resources/BreakableWall.png");               // Loads wall two image
+        tankOneSprite = loader.loadImage("/Resources/TankOneSpriteSheet.png");    // Loads tank one sprite sheet image
+        tankTwoSprite = loader.loadImage("/Resources/TankTwoSpriteSheet.png");    // Loads tank two sprite sheet image
+        healthBox = loader.loadImage("/Resources/HealthBox.png");
         
         ss = new SpriteSheet(background);                               // background sprite sheet
         tankOne_ss = new SpriteSheet(tankOneSprite);                    // tankOne's sprite sheet
@@ -159,11 +159,11 @@ public class TankWars extends Canvas implements Runnable{
         handler.render(g);                                  // Must be placed after background ** Don't forget **
         g2d.translate(camera.getX(), camera.getY());        // Following camera -- Place everything drawn in between
         
-        //leftScreen = world.getSubimage((int)camera.getX(), (int)camera.getY(), 960, 960);
-        //rightScreen = world.getSubimage((int)camera2.getX(), (int)camera.getY(), 960, 960);
+//        leftScreen = world.getSubimage((int)camera.getX(), (int)camera.getY(), 960, 1080);
+//        rightScreen = world.getSubimage((int)camera2.getX(), (int)camera.getY(), 960, 1080);
         
-        //g2d.drawImage(leftScreen, 0, 0, 960, 1080, null);
-        //g2d.drawImage(rightScreen, 960, 0, 960, 1080, null);
+//        g2d.drawImage(leftScreen, 0, 0, 960, 1080, null);
+//        g2d.drawImage(rightScreen, 960, 0, 960, 1080, null);
         
         // Draws display
         
