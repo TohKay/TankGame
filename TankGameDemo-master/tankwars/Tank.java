@@ -1,9 +1,9 @@
 package tankwars;
 
-import java.awt.Graphics;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import static tankwars.KeyInputOne.direction;
+import java.awt.geom.AffineTransform;
 
 public class Tank extends GameObject{
     
@@ -104,6 +104,35 @@ public class Tank extends GameObject{
             g.drawImage(tankSpriteUp, x, y, null);
         }
     }
+
+    // TODO: Fix Affine Transform so tank rotates smoothly
+    /*
+    public void render(Graphics g){
+        Graphics2D g2 = (Graphics2D)g;
+        AffineTransform at = AffineTransform.getTranslateInstance(x,y);
+        *//*at = new AffineTransform(1,0,0,1,0,0);
+        at.translate(50,50);
+        g2.setTransform(at);*//*
+        if(direction == 1){
+            //at = new AffineTransform(1,0,0,1,0,0);
+            at.rotate(Math.toRadians(90));
+            g2.drawImage(tankSpriteUp, at, null);
+        } else if(direction == 2){
+            //at = new AffineTransform(0,0,0,0,0,0);
+            at.rotate(Math.toRadians(-90));
+            g2.drawImage(tankSpriteDown, at, null);
+        } else if(direction == 3){
+            //at = new AffineTransform(-1,0,0,-1,0,0);
+            at.rotate(Math.toRadians(90));
+            g2.drawImage(tankSpriteLeft, at, null);
+        } else if(direction == 4){
+            //at = new AffineTransform(1,0,0,1,0,0);
+            at.rotate(Math.toRadians(-90));
+            g2.drawImage(tankSpriteRight, at, null);
+        } else {
+            g.drawImage(tankSpriteUp, x, y, null);
+        }
+    }*/
 
     // Bounds used for collisions
     public Rectangle getBounds() {
