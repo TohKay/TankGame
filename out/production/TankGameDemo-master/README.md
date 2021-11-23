@@ -1,2 +1,0 @@
-# TankGameDemo
-Tank Game Deam
