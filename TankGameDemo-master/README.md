@@ -1,13 +1,13 @@
 # TankGameDemo
-##Controls
+## Controls
 
 
-###Player 1:
+### Player 1:
 - Movement - WASD 
 - Wall Shot - "F" 
 - Tank Shot - "G"
 
-###Player 2:
+### Player 2:
 - Movement - Arrow Keys 
 - Wall Shot - "." 
 - Tank Shot - "/"
